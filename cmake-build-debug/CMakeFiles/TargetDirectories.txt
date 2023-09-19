@@ -1,0 +1,3 @@
+C:/Users/sd/Desktop/College/1a/CS137/CS137 Code/cmake-build-debug/CMakeFiles/CS137_Code.dir
+C:/Users/sd/Desktop/College/1a/CS137/CS137 Code/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sd/Desktop/College/1a/CS137/CS137 Code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
