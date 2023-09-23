@@ -1,0 +1,52 @@
+TUTORIAL PROBLEM PLEASE DONT AUTO FORMAT
+
+#include <stdio.h>
+
+
+int main () {
+
+int rawSize = 0;
+
+scanf("%d", &rawSize);
+
+int size = 2*rawSize+1;
+
+
+for (int i = 0; i < size; i++) {
+
+	//print the first and last rows
+	if (i == 0 || i == size-1) {
+		printf("+");
+
+		for (int j = 0; j < size-2; j++) {
+			printf("-");
+		}
+
+		printf("+\n");
+		continue;
+	}
+
+
+
+		printf("|");
+
+		for (int j = 2; j < size; j++) {
+
+			if (j == size/2+1) {
+				printf("X");
+			} else {
+				printf(" ");
+			}
+
+		}
+
+		printf("|\n");
+
+	}
+
+}
+
+
+return 0;
+
+}

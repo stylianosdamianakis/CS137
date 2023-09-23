@@ -8,4 +8,6 @@ add_executable(CS137_Code main.c
         a1/divisible9.c
         a1/grades.c
         a2/snake.c
+        a2/functions.h
+        a2/functions.c
 )

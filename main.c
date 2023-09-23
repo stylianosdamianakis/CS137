@@ -1,12 +1,13 @@
+#include <stdio.h>
+#include "a2/functions.h"
 extern int division();
 extern int divisible9();
 extern int grades();
-extern int snake();
 
 int main() {
 
     //testing assignment solutions
-    snake();
+    spiral(5);
 
     return 0;
 }
