@@ -1,0 +1,31 @@
+---------------------------------------------------------------
+File meant to practice writing code without the help of an IDE.
+---------------------------------------------------------------
+
+
+void rotation(int w){
+
+    //get the number of frames that need to be printed
+    int size = (w % 2 == 0)?(w+1)/2:(w+1)/2-1;
+
+    //loop through each frame
+    for (int i = 0; i < size; i++) {
+
+        int corner1 = 1+(w+1)*i;
+        int corner2 = w+(w-1)*i;
+        int corner3 = w*w-(w+1)*i;
+        int corner4 = w*w-(w-1)-(w-1)*i;
+
+        //loop through the number of sets of 4 nums that need to be printed
+        for (int j = 0; j < (w-1)-2*i; j++) {
+            printf("%d %d %d %d ", corner1+j, corner2+(w*j), corner3-1*j, corner4-w*j);
+        }
+    }
+
+    //print the middle number if applicable
+    if (w % 2 == 1){
+        printf("%d", (w/2+1)+w*(w/2));
+    }
+
+    printf("\n");
+}

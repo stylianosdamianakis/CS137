@@ -7,7 +7,7 @@ extern int grades();
 int main() {
 
     //testing assignment solutions
-    spiral(5);
+    rotation(5);
 
     return 0;
 }
