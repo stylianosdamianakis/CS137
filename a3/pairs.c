@@ -1,20 +1,16 @@
 #include <stdio.h>
 
-
-void pairHelper (int n, int result) {
+void numberPairs (int n) {
 
     if (n == 0) return;
 
-    //
-    printf("%d", result);
-    printf("%d", result);
-    //pairHelper(n / 10, );
+    int lastDig = n % 10;
+    int scndLastDig = (n / 10) % 10;
 
+    numberPairs(n / 10);
 
-}
-
-
-void numberPairs (int n) {
-    pairHelper(n, n % 10);
-    printf("\n");
+    if (lastDig != scndLastDig) {
+        printf("%d", n % 10);
+        printf("%d", n % 10);
+    }
 }
