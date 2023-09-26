@@ -1,7 +1,3 @@
----------------------------------------------------------------
-File meant to practice writing code without the help of an IDE.
----------------------------------------------------------------
-
 #include <stdio.h>
 
 
@@ -12,7 +8,7 @@ void pairHelper (int n, int result) {
     //
     printf("%d", result);
     printf("%d", result);
-    pairHelper(n / 10, );
+    //pairHelper(n / 10, );
 
 
 }

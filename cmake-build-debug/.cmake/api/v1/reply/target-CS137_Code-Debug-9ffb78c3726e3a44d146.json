@@ -57,7 +57,10 @@
 				2,
 				3,
 				4,
-				6
+				6,
+				7,
+				8,
+				9
 			]
 		}
 	],
@@ -99,7 +102,10 @@
 				2,
 				3,
 				4,
-				6
+				6,
+				7,
+				8,
+				9
 			]
 		},
 		{
@@ -151,6 +157,24 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "a2/functions.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "a3/pairs.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "a3/jumpstairs.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "a3/narcissistic.c",
 			"sourceGroupIndex" : 0
 		}
 	],

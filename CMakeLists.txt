@@ -10,4 +10,7 @@ add_executable(CS137_Code main.c
         a2/snake.c
         a2/functions.h
         a2/functions.c
+        a3/pairs.c
+        a3/jumpstairs.c
+        a3/narcissistic.c
 )
