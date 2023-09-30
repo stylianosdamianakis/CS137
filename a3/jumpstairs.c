@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int jump_stair_v1 (int n) {
 
     if (n < 0) return 0;

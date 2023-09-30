@@ -1,19 +1,23 @@
 #include <stdio.h>
-#include "a2/functions.h"
-extern int division();
-extern int divisible9();
-extern int grades();
-extern int numberPairs();
-extern int jump_stair_v1();
-extern int jump_stair_v2();
-extern int jump_stair_v3();
-
+#include <stdbool.h>
+#include <assert.h>
+extern int narcissist();
 
 
 int main() {
 
-    //testing assignment solutions
-    printf("%d", jump_stair_v2(7));
+    assert(narcissist(1));
+    assert(narcissist(9));
+    assert(narcissist(153));
+    assert(narcissist(370));
+    assert(narcissist(92727));
+    assert(narcissist(548834));
+    assert(!narcissist(10));
+    assert(!narcissist(92));
+    assert(!narcissist(1535));
+    assert(!narcissist(1234));
+    assert(!narcissist(92726));
+    assert(!narcissist(93083));
 
     return 0;
 }

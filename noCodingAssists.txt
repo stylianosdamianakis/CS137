@@ -2,29 +2,40 @@
 File meant to practice writing code without the help of an IDE.
 ---------------------------------------------------------------
 
-int jump_stair_v1 (int n) {
+#include <stdio.h>
+#include <assert.h>
+#include <stdbool.h>
 
-    if (n < 0) return 0;
-    if (n == 0) return 1;
+int pow(int n, int acc, int num){
 
-    return jump_stair_v1(n - 1) + jump_stair_v1(n - 2);
+    if (num == 0) return acc;
+
+    acc *= n;
+    pow(n, acc, --num);
 }
 
 
-int jump_stair_v2(int n){
+int sum(int n, int acc, int num){
 
-    if (n < 0) return 0;
-    if (n == 0) return 1;
+    if (n == 0) return acc;
 
-    return jump_stair_v2(n - 3) + jump_stair_v2(n - 6);
+    acc += pow(n % 10, 1, num);
+    sum(n / 10, acc, num);
+}
+
+int termCount(int n, int acc){
+
+    if (n/10 == 0) return acc;
+    termCount(n/10, ++acc);
+}
+
+bool narcissist(int n){
+
+    int total = sum(n, 0, termCount(n, 1));
+
+    if (total == n) return true;
+    return false;
 }
 
 
-int jump_stair_v3(int n){
-
-    if (n < 0) return 0;
-    if (n == 0) return 1;
-
-    return jump_stair_v3(n - 6) + jump_stair_v3(n - 9);
-}
 
