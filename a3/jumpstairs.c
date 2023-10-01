@@ -10,7 +10,8 @@ int jump_stair_v1 (int n) {
 int jump_stair_v2(int n){
 
     if (n < 0) return 0;
-    if (n == 0) return 1;
+    if (n == 0 || n == 1) return 1;
+    if (n == 2 || n == 4) return 2;
 
     return jump_stair_v2(n - 3) + jump_stair_v2(n - 6);
 }

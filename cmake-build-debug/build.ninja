@@ -55,8 +55,8 @@ build CMakeFiles/CS137_Code.dir/main.c.obj: C_COMPILER__CS137_Code_unscanned_Deb
   OBJECT_DIR = CMakeFiles\CS137_Code.dir
   OBJECT_FILE_DIR = CMakeFiles\CS137_Code.dir
 
-build CMakeFiles/CS137_Code.dir/a3/narcissistic.c.obj: C_COMPILER__CS137_Code_unscanned_Debug C$:/Users/sd/Desktop/College/1a/CS137/CS137$ Code/a3/narcissistic.c || cmake_object_order_depends_target_CS137_Code
-  DEP_FILE = CMakeFiles\CS137_Code.dir\a3\narcissistic.c.obj.d
+build CMakeFiles/CS137_Code.dir/a3/jumpstairs.c.obj: C_COMPILER__CS137_Code_unscanned_Debug C$:/Users/sd/Desktop/College/1a/CS137/CS137$ Code/a3/jumpstairs.c || cmake_object_order_depends_target_CS137_Code
+  DEP_FILE = CMakeFiles\CS137_Code.dir\a3\jumpstairs.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\CS137_Code.dir
   OBJECT_FILE_DIR = CMakeFiles\CS137_Code.dir\a3
@@ -69,7 +69,7 @@ build CMakeFiles/CS137_Code.dir/a3/narcissistic.c.obj: C_COMPILER__CS137_Code_un
 #############################################
 # Link the executable CS137_Code.exe
 
-build CS137_Code.exe: C_EXECUTABLE_LINKER__CS137_Code_Debug CMakeFiles/CS137_Code.dir/main.c.obj CMakeFiles/CS137_Code.dir/a3/narcissistic.c.obj
+build CS137_Code.exe: C_EXECUTABLE_LINKER__CS137_Code_Debug CMakeFiles/CS137_Code.dir/main.c.obj CMakeFiles/CS137_Code.dir/a3/jumpstairs.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CS137_Code.dir
