@@ -3,14 +3,16 @@
 #include <assert.h>
 extern void score_update();
 
-int filterdigit(int num, int digit){
-    if(num<10){
-        if(num==digit)return 0;
-        return num;
+int max_input(int largest){
+    int n = 0;
+    if(!scanf("%d", &n)){
+        return largest;
     }
-    return (num%10 == digit)?filterdigit(num/10, digit):filterdigit(num/10, digit)*10+(num%10);
+    largest = (largest>n)?largest:n;
+    max_input(largest);
 }
 
+
 int main(void) {
-    printf("%d", filterdigit(17271,1));
+    printf("%d", max_input(0));
 }

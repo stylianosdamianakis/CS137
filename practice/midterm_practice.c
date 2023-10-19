@@ -20,3 +20,37 @@ int filterdigit(int num, int digit){
     }
     return (num%10 == digit)?filterdigit(num/10, digit):filterdigit(num/10, digit)*10+(num%10);
 }
+
+int power(int b, int n){
+    if(n==0) return 1;
+    return b*power(b,n-1);
+}
+
+int geometric_sum(int b, int n){
+    if(n==0) return 1;
+    return power(b, n) + geometric_sum(b, n-1);
+}
+
+int helper(long int num, int place, int acc){
+    if(num == 0) return acc;
+    acc += (num % 10)*place;
+    helper(num/10, place/10, acc);
+}
+
+int getSize(int num, int acc){
+    if (num == 1) return acc;
+    getSize(num/10, acc*10);
+}
+
+int fun(long int num){
+    helper(num, getSize(num, 1), 0);
+}
+
+int max_input(int largest){
+    int n = 0;
+    if(!scanf("%d", &n)){
+        return largest;
+    }
+    largest = (largest>n)?largest:n;
+    max_input(largest);
+}
