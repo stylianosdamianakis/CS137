@@ -5,4 +5,7 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(CS137_Code main.c
         a3/jumpstairs.c
+        a4/grades.c
+        a4/matrix.c
+        a4/trapezoidal.c
 )

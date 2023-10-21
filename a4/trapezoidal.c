@@ -1,11 +1,7 @@
----------------------------------------------------------------
-File meant to practice writing code without the help of an IDE.
----------------------------------------------------------------
-
-#include <math.h>
 #include <stdio.h>
-#include <stdbool.h>
+#include <math.h>
 #include <assert.h>
+#define PI acos(-1)
 
 double trapezoidal(double (*f)(double), double a, double b, double epsilon, int n){
 
