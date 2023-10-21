@@ -50,9 +50,9 @@ void grades(){
     sDev = sqrt((sumOfDiffsSquared/(num-1)));
 
     printf("The maximal grade is: %d\n", max);
-    printf("The number of students who received the maximal grade is: %d\n", numMax);
+    printf("The number of students who received the maximal grade is %d\n", numMax);
     printf("The minimal grade is: %d\n", min);
-    printf("The number of students who received the minimal grade is: %d\n", numMin);
+    printf("The number of students who received the minimal grade is %d\n", numMin);
     printf("The course mean is: %0.3f\n", mean);
     printf("The standard deviation is: %0.3f\n", sDev);
     printf("The number of students who failed the course is: %d\n", numFailed);
