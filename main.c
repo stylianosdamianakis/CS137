@@ -3,6 +3,6 @@
 #include <assert.h>
 #include <math.h>
 
-int main(void) {
+//int main(void) {
 
-}
+//}

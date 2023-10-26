@@ -8,4 +8,7 @@ add_executable(CS137_Code main.c
         a4/grades.c
         a4/matrix.c
         a4/trapezoidal.c
+        a5/flexdata.c
+        a5/company.c
+        a5/rec.c
 )

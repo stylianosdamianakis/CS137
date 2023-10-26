@@ -79,6 +79,24 @@ build CMakeFiles/CS137_Code.dir/a4/trapezoidal.c.obj: C_COMPILER__CS137_Code_uns
   OBJECT_DIR = CMakeFiles\CS137_Code.dir
   OBJECT_FILE_DIR = CMakeFiles\CS137_Code.dir\a4
 
+build CMakeFiles/CS137_Code.dir/a5/flexdata.c.obj: C_COMPILER__CS137_Code_unscanned_Debug C$:/Users/sd/Desktop/College/1a/CS137/CS137$ Code/a5/flexdata.c || cmake_object_order_depends_target_CS137_Code
+  DEP_FILE = CMakeFiles\CS137_Code.dir\a5\flexdata.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\CS137_Code.dir
+  OBJECT_FILE_DIR = CMakeFiles\CS137_Code.dir\a5
+
+build CMakeFiles/CS137_Code.dir/a5/company.c.obj: C_COMPILER__CS137_Code_unscanned_Debug C$:/Users/sd/Desktop/College/1a/CS137/CS137$ Code/a5/company.c || cmake_object_order_depends_target_CS137_Code
+  DEP_FILE = CMakeFiles\CS137_Code.dir\a5\company.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\CS137_Code.dir
+  OBJECT_FILE_DIR = CMakeFiles\CS137_Code.dir\a5
+
+build CMakeFiles/CS137_Code.dir/a5/rec.c.obj: C_COMPILER__CS137_Code_unscanned_Debug C$:/Users/sd/Desktop/College/1a/CS137/CS137$ Code/a5/rec.c || cmake_object_order_depends_target_CS137_Code
+  DEP_FILE = CMakeFiles\CS137_Code.dir\a5\rec.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\CS137_Code.dir
+  OBJECT_FILE_DIR = CMakeFiles\CS137_Code.dir\a5
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CS137_Code
@@ -87,7 +105,7 @@ build CMakeFiles/CS137_Code.dir/a4/trapezoidal.c.obj: C_COMPILER__CS137_Code_uns
 #############################################
 # Link the executable CS137_Code.exe
 
-build CS137_Code.exe: C_EXECUTABLE_LINKER__CS137_Code_Debug CMakeFiles/CS137_Code.dir/main.c.obj CMakeFiles/CS137_Code.dir/a3/jumpstairs.c.obj CMakeFiles/CS137_Code.dir/a4/grades.c.obj CMakeFiles/CS137_Code.dir/a4/matrix.c.obj CMakeFiles/CS137_Code.dir/a4/trapezoidal.c.obj
+build CS137_Code.exe: C_EXECUTABLE_LINKER__CS137_Code_Debug CMakeFiles/CS137_Code.dir/main.c.obj CMakeFiles/CS137_Code.dir/a3/jumpstairs.c.obj CMakeFiles/CS137_Code.dir/a4/grades.c.obj CMakeFiles/CS137_Code.dir/a4/matrix.c.obj CMakeFiles/CS137_Code.dir/a4/trapezoidal.c.obj CMakeFiles/CS137_Code.dir/a5/flexdata.c.obj CMakeFiles/CS137_Code.dir/a5/company.c.obj CMakeFiles/CS137_Code.dir/a5/rec.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CS137_Code.dir
