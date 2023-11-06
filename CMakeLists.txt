@@ -11,4 +11,6 @@ add_executable(CS137_Code main.c
         a5/flexdata.c
         a5/company.c
         a5/rec.c
+        a6/vlinteger.c
+        a6/vlinteger.h
 )
