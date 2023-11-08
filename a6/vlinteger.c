@@ -2,23 +2,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct linteger *vlintegerCreate(void) {
+struct linteger *vlintegerCreate (void) {
     struct linteger *t1 = malloc(sizeof(struct linteger));
     t1->arr = NULL;
     t1->length = 0;	// no values in t1.
     return t1;
 }
 
-int power(int x, int y) {
-    int total = 1;
-    for (int i = 0; i < y; i++) {
-        total*=x;
-    }
-
-    return total;
-}
-
-void vlintegerPrint(struct linteger *t1) {
+void vlintegerPrint (struct linteger *t1) {
     printf("length=%d\n", t1->length);
     for (int i = 0; i < t1->length; ++i)
     {
@@ -27,7 +18,7 @@ void vlintegerPrint(struct linteger *t1) {
     printf("\n");
 }
 
-void vlintegerDestroy(struct linteger *t1) {
+void vlintegerDestroy (struct linteger *t1) {
     if (t1)
     {
         free(t1->arr);	// free the inside array first
@@ -35,7 +26,7 @@ void vlintegerDestroy(struct linteger *t1) {
     }
 }
 
-void vlintegerRead(struct linteger *t1) {
+void vlintegerRead (struct linteger *t1) {
 
     //reset the length and the array values
     t1->length = 0;
@@ -65,73 +56,95 @@ void vlintegerRead(struct linteger *t1) {
 }
 
 
-struct linteger *vlintegerAdd(struct linteger *t1, struct linteger *t2) {
+struct linteger *vlintegerAdd (struct linteger *t1, struct linteger *t2) {
 
-    //finding the sum
-    int sum = 0;
-    for (int i = 0; i < t1->length; i++) {
-        sum += t1->arr[i] * power(10, t1->length - i - 1);
-    }
-    for (int i = 0; i < t2->length; i++) {
-        sum += t2->arr[i] * power(10, t2->length - i - 1);
-    }
-
-    //find the length of the resulting sum
-    int length = 0;
-    for (int i = sum; i > 0; i/=10) {
-        length++;
-    }
-
-    //create the final structure
+    //creating the linteger struct to hold the sum
     struct linteger *total = vlintegerCreate();
+    total->length = (t1->length > t2->length)?t1->length+1:t2->length+1;
+    total->arr = malloc(total->length * sizeof(int));
 
-    int sumCopy = sum;
-    int *array = malloc(length * sizeof(int));
-    for (int i = 0; sumCopy > 0; i++) {
-        array[length-1-i] = sumCopy%10;
-        sumCopy/=10;
+    //summing up the two arrays
+    for (int i = 0; i < total->length; i++) {
+
+        int sum = 0;
+        if (t1->length-1-i >= 0){
+            sum += t1->arr[t1->length-1-i];
+        }
+        if (t2->length-1-i >= 0){
+            sum += t2->arr[t2->length-1-i];
+        }
+
+        total->arr[total->length-i-1] = sum;
     }
 
-    total->arr = array;
-    total->length = length;
+    //calculating carryover
+    for (int i = total->length-1; i > 0; i--) {
+        if (total->arr[i] >= 10) {
+            total->arr[i] -= 10;
+            total->arr[i-1] += 1;
+        }
+    }
+
+    //removing frontal zero if applicable
+    if (total->arr[0] == 0) {
+        struct linteger *total2 = vlintegerCreate();
+        total2->length = total->length-1;
+        total2->arr = malloc(total2->length * sizeof(int));
+
+        //copying from total1 to total 2
+        for (int i = 1; i < total->length; i++) {
+            total2->arr[i-1] = total->arr[i];
+        }
+
+        free(total->arr);
+        return total2;
+    }
 
     return total;
 }
 
 
-struct linteger *vlintegerMult(struct linteger *t1, struct linteger *t2) {
+struct linteger *vlintegerMult (struct linteger *t1, struct linteger *t2) {
 
-    //finding the sums
-    int sum1 = 0;
-    int sum2 = 0;
-
-    for (int i = 0; i < t1->length; i++) {
-        sum1 += t1->arr[i] * power(10, t1->length - i - 1);
-    }
-    for (int i = 0; i < t2->length; i++) {
-        sum2 += t2->arr[i] * power(10, t2->length - i - 1);
-    }
-
-    int tot = sum1 * sum2;
-
-    //find the length of the resulting sum
-    int length = 0;
-    for (int i = tot; i > 0; i/=10) {
-        length++;
-    }
-
-    //create the final structure
+    //creating the linteger struct to hold the product
     struct linteger *total = vlintegerCreate();
+    total->length = t1->length + t2->length;
+    total->arr = malloc(total->length * sizeof(int));
 
-    int totCopy = tot;
-    int *array = malloc(length * sizeof(int));
-    for (int i = 0; totCopy > 0; i++) {
-        array[length-1-i] = totCopy%10;
-        totCopy/=10;
+    //initializing the array with zeros
+    for (int i = 0; i < total->length; i++) {
+        total->arr[i] = 0;
     }
 
-    total->arr = array;
-    total->length = length;
+    //multiplying the structs
+    for (int i = 0; i < t1->length; i++) {
+        for (int j = 0; j < t2->length; j++) {
+            total->arr[i+j+1] += t1->arr[i] * t2->arr[j];
+        }
+    }
+
+    //calculating carryover
+    for (int i = total->length-1; i > 0; i--) {
+        if (total->arr[i] >= 10) {
+            total->arr[i-1] += total->arr[i]/10;
+            total->arr[i] %= 10;
+        }
+    }
+
+    //removing frontal zero if applicable
+    if (total->arr[0] == 0) {
+        struct linteger *total2 = vlintegerCreate();
+        total2->length = total->length-1;
+        total2->arr = malloc(total2->length * sizeof(int));
+
+        //copying from total1 to total 2
+        for (int i = 1; i < total->length; i++) {
+            total2->arr[i-1] = total->arr[i];
+        }
+
+        free(total->arr);
+        return total2;
+    }
 
     return total;
 }
