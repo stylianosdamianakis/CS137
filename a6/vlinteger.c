@@ -97,6 +97,7 @@ struct linteger *vlintegerAdd (struct linteger *t1, struct linteger *t2) {
         }
 
         free(total->arr);
+        free(total);
         return total2;
     }
 
@@ -143,6 +144,7 @@ struct linteger *vlintegerMult (struct linteger *t1, struct linteger *t2) {
         }
 
         free(total->arr);
+        free(total);
         return total2;
     }
 
