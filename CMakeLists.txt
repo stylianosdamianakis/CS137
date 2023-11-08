@@ -13,4 +13,7 @@ add_executable(CS137_Code main.c
         a5/rec.c
         a6/vlinteger.c
         a6/vlinteger.h
+        a6/bank.c
+        a6/bank.h
+        a6/bankmain.c
 )
