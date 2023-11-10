@@ -96,10 +96,11 @@ bool Transfer(double amount, Account *sender, Account *receiver) {
 bool CollectLoanPayments(Bank *bank) {
 
     //can everyone pay the loan
+    bool retVal = true;
     for (int i = 0; i < bank->nAcc; i++) {
         Account *account = bank->accounts[i];
         if (!account->active || !account->loan.active) continue;
-        if (account->balance < account->loan.amount * account->loan.interest) return false;
+        if (account->balance < account->loan.amount * account->loan.interest) retVal = false;
     }
 
     //pay the loans
@@ -107,7 +108,7 @@ bool CollectLoanPayments(Bank *bank) {
         PayLoan(bank->accounts[i]);
     }
 
-    return true;
+    return retVal;
 }
 
 bool CloseAccount(Account *account) {
