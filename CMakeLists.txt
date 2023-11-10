@@ -16,4 +16,5 @@ add_executable(CS137_Code main.c
         a6/bank.c
         a6/bank.h
         a6/bankmain.c
+        a7/semidrome.c
 )
