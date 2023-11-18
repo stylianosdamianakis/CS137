@@ -63,7 +63,9 @@
 				8,
 				10,
 				12,
-				13
+				13,
+				14,
+				15
 			]
 		}
 	],
@@ -111,7 +113,9 @@
 				8,
 				10,
 				12,
-				13
+				13,
+				14,
+				15
 			]
 		},
 		{
@@ -205,6 +209,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "a7/semidrome.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "a7/lookbehind.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "a7/mergestrings.c",
 			"sourceGroupIndex" : 0
 		}
 	],
