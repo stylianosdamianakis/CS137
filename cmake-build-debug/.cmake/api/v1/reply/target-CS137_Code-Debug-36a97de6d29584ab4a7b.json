@@ -65,7 +65,9 @@
 				12,
 				13,
 				14,
-				15
+				15,
+				16,
+				17
 			]
 		}
 	],
@@ -115,7 +117,9 @@
 				12,
 				13,
 				14,
-				15
+				15,
+				16,
+				17
 			]
 		},
 		{
@@ -221,6 +225,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "a7/mergestrings.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "a8/multiadd.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "a8/countcommon.c",
 			"sourceGroupIndex" : 0
 		}
 	],
