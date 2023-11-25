@@ -21,4 +21,6 @@ add_executable(CS137_Code main.c
         a7/mergestrings.c
         a8/multiadd.c
         a8/countcommon.c
+        a9/doubleselect.c
+        a9/ternary.c
 )
