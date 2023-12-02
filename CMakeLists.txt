@@ -23,4 +23,6 @@ add_executable(CS137_Code main.c
         a8/countcommon.c
         a9/doubleselect.c
         a9/ternary.c
+        a10/doublyList.c
+        a10/duckgoose.c
 )
